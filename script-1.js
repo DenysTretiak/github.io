@@ -27,8 +27,5 @@ const builder = new StringBuilder('.');
     .append('^')
     .prepend('^')
     .pad('=')
-    .append('2')
-    .prepend('3')
-
 
 console.log(builder); // '=^.^='
