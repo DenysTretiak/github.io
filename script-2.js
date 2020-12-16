@@ -1,5 +1,5 @@
 let controls = document.getElementById('controls');
-let input = document.getElementsByClassName('js-input')[0];
+let input = document.querySelector('.js-input');
 const boxes = document.getElementById('boxes');
 
 function createBoxes(amount) {
@@ -12,16 +12,21 @@ function createBoxes(amount) {
         height += 10;
         divEl.style.width = `${width}px`;
         divEl.style.height = `${height}px`;
-        const a = Math.random() * (255 - 0) + 0;
-        const b = Math.random() * (255 - 0) + 0;
-        const c = Math.random() * (255 - 0) + 0;
+        const a = getRandomNumber();
+        const b = getRandomNumber();
+        const c = getRandomNumber();
         divEl.style.background = `rgb(${a}, ${b}, ${c})`;
         boxes.appendChild(divEl);
     }
 }
 
+function getRandomNumber() {
+  return Math.random() * (255 - 0) + 0;
+}
+
 function destroyBoxes() {
     boxes.innerHTML = '';
+    input.value = '';
 }
 
 controls.onclick = (event) => {

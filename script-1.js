@@ -32,15 +32,3 @@ const builder = new StringBuilder('.');
 
 
 console.log(builder); // '=^.^='
-
-
-function checkSwitch(num) {
-  switch(num) {
-    case 1: return 'one'
-    case 2: return 'two'
-  }   
-}
-
-console.log(checkSwitch(3));
-
-
